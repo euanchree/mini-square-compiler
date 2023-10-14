@@ -1,0 +1,17 @@
+& test_program_2 euanchree 1912490
+& testing the call expression code generation
+
+let
+    var loopCurrent ~ Integer;
+    var loopMax ~ Integer
+in
+begin
+    put({S});put({T});put({A});put({R});put({T});put({I});put({N});put({G});puteol();
+
+    putint(chr(36));
+    puteol();
+    put(ord({M}));
+    puteol();
+    
+    puteol();put({S});put({T});put({O});put({P});put({P});put({I});put({N});put({G})
+end

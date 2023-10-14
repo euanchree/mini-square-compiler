@@ -1,0 +1,17 @@
+& test_program_3 euanchree 1912490
+
+let
+    var varInt ~ Integer;
+    var varInt2 ~ Integer
+in
+begin
+    getint(var varInt);
+    putint(varInt); puteol();
+    getint(var varInt2);
+    putint(varInt2); puteol();
+
+    if (!(varInt > varInt2)) then
+        put({Y})
+    else
+        put({N})
+end

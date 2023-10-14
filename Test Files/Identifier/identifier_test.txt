@@ -1,0 +1,23 @@
+& identifier_test.txt euanchree 1912490
+& simple program to test the identifier
+
+let
+	var cycles ~ Integer;
+	var count ~ Integer;
+	const letter ~ {Y}
+in
+begin
+	getint(var cycles);
+
+	count ~ 0;
+
+	loop
+		count ~ count + 1
+	while (count < cycles)
+		put(letter)
+	repeat;
+
+	? (count < cycles) => put({Y});
+
+	putint(chr(1))
+end

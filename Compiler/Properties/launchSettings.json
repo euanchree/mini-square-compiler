@@ -1,0 +1,44 @@
+{
+  "profiles": {
+    "Scanner Test": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Scanner\\Scanner_test.txt\" example_chars.tam example_chars.txt",
+      "workingDirectory": "../"
+    },
+    "Parser Test": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Parser\\parser_test.txt\" example_chars.tam example_chars.txt",
+      "workingDirectory": "../"
+    },
+    "Type Checker Test": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Type Checker\\type_checker_test.txt\" example_chars.tam example_chars.txt",
+      "workingDirectory": "../"
+    },
+    "Indentifier Test": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Identifier\\identifier_test.txt\" example_chars.tam example_chars.txt",
+      "workingDirectory": "../"
+    },
+    "Test Program 1": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Test Program\\test_program_1.txt\" test_program_1.tam test_program_1.txt",
+      "workingDirectory": "../"
+    },
+    "Test Program 2": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Test Program\\test_program_2.txt\" test_program_2.tam test_program_2.txt",
+      "workingDirectory": "../"
+    },
+    "Test Program 3": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Test Program\\test_program_3.txt\" test_program_3.tam test_program_3.txt",
+      "workingDirectory": "../"
+    },
+    "Test Program 4": {
+      "commandName": "Project",
+      "commandLineArgs": "\"Test Files\\Test Program\\test_program_4.txt\" test_program_4.tam test_program_4.txt",
+      "workingDirectory": "../"
+    }
+  }
+}

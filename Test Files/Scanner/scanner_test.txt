@@ -1,0 +1,59 @@
+& scanner_test.txt euan chree 1912490
+& This is a test file for the scanner
+& This comment and the ones above should be ignored
+
+& keywords / reserved words
+begin
+const
+else
+end
+if
+in
+let
+then
+var
+while
+wend
+repeat
+loop
+
+& punctuation
+;
+?
+~
+(
+)
+=>
+{ }
+
+& operators
++
+-
+*
+/
+>
+<
+=
+!
+
+& identifiers
+identifier1
+2indentifier
+1dentifier2
+IDENTIFIER
+
+& integer liters
+1234567890
+132432
+9238
+
+& graphics
+{a}
+{1}
+{ }
+{?}
+
+& Error testing
+# & unkown character
+{a & graphic which has not been closesd
+{+} & wrong character for a graphic

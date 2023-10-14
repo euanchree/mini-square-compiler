@@ -1,0 +1,96 @@
+& type_checker.txt euanchree 1912490
+& file to test the type checker
+& each line should trigger a desired error, however might trigger multiple (including the desired one though).
+
+let
+    &  vars
+	var varInt ~ Integer;
+	var varChar ~ Char;
+	var varBool ~ Boolean;
+
+	&  consts
+	const conInt ~ 1;
+	const conChar ~ {a};
+	const conBool ~ true;
+
+	& Misc
+	&  Loop Control
+	var loopMax ~ Integer;
+	var loopCurrent ~ Integer;
+
+	& Using an Identifier which isnt a type
+	var testInt ~ NonExistType;
+
+	& Assigning an int to a value which is too big
+	const testInt2 ~ 10000000
+in
+begin
+    & Assigning to an Identifier which dosent exist
+    madeUpVar ~ 1;
+
+    & Assigning wrong type
+    varInt ~ {b};
+	varInt ~ true;
+
+    & Calling a Identifier which isnt a function
+    varInt();
+
+    & Calling function which takes no argument but giving it one
+	eol(1);
+
+	& Calling function which requires argument without one
+	put();
+
+	& Giving function wrong type
+	put(1);
+	put(true);
+
+	& Giving a function which requires a var parameter an expression parameter
+	get(1);
+
+	& Giving a function which requires an expression parameter a var parameter
+	put(var varChar);
+
+	& Giving a quick if command expression the wrong type
+	? {a} => ;
+	? 1 => ;
+
+	& Giving a if command expression the wrong type
+	if ({a}) then else;
+	if (1) then else;
+
+	& Giving a while command expression the wrong type
+	while ({a}) wend;
+	while (1) wend;
+
+	& Giving a loop command expression the wrong type
+	loop put({a}) while ({a}) put({a}) repeat;
+	loop put({a}) while (1) put({a}) repeat;
+
+	& Giving a binary expression a non binary operator
+	? (true ! false) => ;
+
+	& Giving a binary expression two different types of argument
+	? (true = 1) => ;
+
+	& Giving a binary expression the wrong type
+	? (true / 3) => ;
+	? (3 / false) => ;
+
+	& Using a indentifier which isnt a var or const
+	put(putint);
+	putint(put);
+
+	& Giving a unary expression a non unary operator
+	? (+false) => ;
+
+	& Giving a unary expression the wrong type
+	? (!10) => ;
+
+	& Giving a function which requires a var parameter a indentifier which isnt a var
+	get(var constChar);
+
+	& Giving a function call a function instead of a procedure
+	put(chr())
+
+end

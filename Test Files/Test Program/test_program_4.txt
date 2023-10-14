@@ -1,0 +1,16 @@
+& test_program_4 euanchree 1912490
+
+let
+    var loopCurrent ~ Integer;
+    var loopMax ~ Integer 
+in
+begin
+    loopCurrent ~ 0;
+    loopMax ~ 20;
+
+    loop
+        loopCurrent ~ loopCurrent + 1
+    while (loopCurrent < loopMax)
+        putint(loopCurrent)
+    repeat
+end

@@ -1,0 +1,16 @@
+& test_program_1 euanchree 1912490
+& testing the quick if code generation
+
+let
+    var tempInt ~ Integer;
+    const conditionalInt ~ 50
+in
+begin
+    put({S});put({T});put({A});put({R});put({T});put({I});put({N});put({G});puteol();
+
+    getint(var tempInt);
+
+    ? (tempInt > conditionalInt) => put({Y});
+
+    puteol();put({S});put({T});put({O});put({P});put({P});put({I});put({N});put({G})
+end

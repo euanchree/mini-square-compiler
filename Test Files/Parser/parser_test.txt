@@ -1,0 +1,90 @@
+& parser_test.txt euanchree 1912490
+& file to test the parser
+
+let
+	& Declarations
+
+	&  vars
+	var varInt ~ Integer;
+	var varChar ~ Char;
+	var varBool ~ Boolean;
+
+	&  consts
+	const conInt ~ 1;
+	const conChar ~ {a};
+	const conBool ~ true;
+
+	& Misc
+	&  Loop Control
+	var loopMax ~ Integer;
+	var loopCurrent ~ Integer
+in
+begin
+
+	& Commands and others statements
+
+	&  Blank
+
+	&  Assign Command
+	varInt ~ 1;
+	varChar ~ {a};
+	varBool ~ true;
+
+	&  Call Command
+	put(varChar);
+	puteol();
+	putint(varInt);
+	puteol();
+	
+	& parameters
+	&  value parameters
+	putint(1); & Integer expression
+	put({a}); & Char expression
+	put(varChar); & Identifier expression
+	putint(ord(varInt)); & Call expression
+	put((({A}))); & bracket expression
+
+	&  var parameters
+
+	& Quick If Command
+	? (varInt = conInt) => begin put({Y}); puteol() end;
+	
+	&  If Command
+	if (varChar = {b}) then begin put({Y}); puteol() end else begin put({N}); puteol() end;
+
+	&  Loop Command
+	loopMax ~ 10;
+	loopCurrent ~ 0;
+	loop
+		loopCurrent ~ (loopCurrent + 1)
+	while (loopCurrent < loopMax)
+	begin
+		put({Y});
+		puteol();
+		putint(loopCurrent); 
+		put({ }); 
+		putint(loopMax);
+		puteol()
+	end
+	repeat;
+
+	& While Command
+	loopMax ~ 10;
+	loopCurrent ~ 0;
+	while (loopCurrent < loopMax)
+	begin
+		put({Y}); 
+		puteol(); 
+		putint(loopCurrent); 
+		put({ }); 
+		putint(loopMax);
+		puteol();
+		loopCurrent ~ (loopMax + 1)
+	end
+	wend;
+
+	put({D}); put({O}); put({N}); put({E}); eol();
+
+	& Examples of error
+	puteol;
+end
